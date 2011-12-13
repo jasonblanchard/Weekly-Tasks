@@ -5,7 +5,7 @@ date=`date +%U`
 
 week=`date +"%B %e, %Y"`
 
-# enter full email as an argument
+# enter full email as a command line argument
 email=$1
 
 # Only send the email if the current week's reports list exists
