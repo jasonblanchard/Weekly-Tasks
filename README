@@ -1,15 +1,29 @@
-wk.sh allows you to add tasks from the command line. Add a link to this file called wk to ~/bin and update $PATH (log out and back in) so you can run it with the wk command. It will accept all arguments as input. For example:
+Put these files in ~/reports. The progam will aggregate all your weekly reports here as well as the two bash scripts.
+
+wk.sh allows you to add tasks from the command line. Add a link to this file called wk to ~/bin and update $PATH (log out and back in) so you can run it with the wk command. It will accept all subsequent arguments as input. For example:
 
 $ wk "Created a script for weekly tasks"
 
-will output
+will output:
 
-- Created a script for weekly tasks" to a file called [week_number]_reports. It will create this file if it doesn't already exist.
+- Created a script for weekly tasks
+
+ to a file called [week_number]_reports. It will create this file if it doesn't already exist.
 
 weeklyreports.sh will email the contents of the current week's report file. Add the email address as an argument to specify the recipient. 
 
-You may need to modify the directories in these scripts to make them work on your machine.
+The program needs mail-utils as a dependency. You may need to edit the scripts a bit so they show the right information (such as your name!).
 
-The program needs mail-utils as a dependency.
+Add weeklyreports.sh to a cron job to have the task email automatically sent. 
 
-Add weeklyreports.sh to a cron job to have the task email automatically sent.
+$ contab -e
+
+will allow you to edit your crontab file. Add the script at your desired time. For example: 
+
+# email list to me every day at 4:30 as a backup
+30 16 * * * /home/[username]/reports/emailreport.sh [youremailaddress]
+
+# email to supervisor every Friday at 4:45
+45 16 * * 5 /home/[your username]/reports/emailreport.sh [otheremailaddress]
+
+
