@@ -1,0 +1,15 @@
+wk.sh allows you to add tasks from the command line. Add a link to this file called wk to ~/bin and update $PATH (log out and back in) so you can run it with the wk command. It will accept all arguments as input. For example:
+
+$ wk "Created a script for weekly tasks"
+
+will output
+
+- Created a script for weekly tasks" to a file called [week_number]_reports. It will create this file if it doesn't already exist.
+
+weeklyreports.sh will email the contents of the current week's report file. Add the email address as an argument to specify the recipient. 
+
+You may need to modify the directories in these scripts to make them work on your machine.
+
+The program needs mail-utils as a dependency.
+
+Add weeklyreports.sh to a cron job to have the task email automatically sent.
