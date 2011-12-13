@@ -1,4 +1,4 @@
-A few bash scripts that add weekly tasks to a file from a unix/Linux command line and email the content to you and/or your supervisor. — Read more
+A few bash scripts that add weekly tasks to a file from a unix/Linux command line and email the content to you and/or your supervisor.
 
 Put these files in ~/reports. The progam will aggregate all your weekly reports here as well as the two bash scripts.
 
