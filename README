@@ -1,3 +1,5 @@
+A few bash scripts that add weekly tasks to a file from a unix/Linux command line and email the content to you and/or your supervisor. — Read more
+
 Put these files in ~/reports. The progam will aggregate all your weekly reports here as well as the two bash scripts.
 
 wk.sh allows you to add tasks from the command line. Add a link to this file called wk to ~/bin and update $PATH (log out and back in) so you can run it with the wk command. It will accept all subsequent arguments as input. For example:
